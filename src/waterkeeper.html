@@ -1,0 +1,117 @@
+<html lang="en">
+  <partial src="head.html"></partial>
+  <partial src="header.html"></partial>
+
+  <body>
+    <main id="swup" class="transition-fade">
+      <partial src="hero-waterkeeper.html"></partial>
+      <div class="container container--small">
+        <div class="intro">
+          <p><span class="highlight">Project Type:</span> A project of Fifty & Fifty creative agency</p>
+          <p><span class="highlight">Discipline:</span> Fullstack Web Developer</p>
+          <p><span class="highlight">Timeline:</span> March - June 2019</p>
+          <p><span class="highlight">Tools:</span> Sublime Text, Adobe XD</p>
+          <p><span class="highlight">Skills:</span>Web development, UX Design, Strategy</p>
+        </div>
+        <article>
+            <h2 class="highlight heading-intro">Content</h2>
+            <p>The waterkeeper alliance is an organization that has set it’s goal on ensuring every community worldwide has drinkable, fishable, swimmable water. </p>
+            <p>They are the largest and fastest growing nonprofit solely focused on clean water. They preserve and protect water by connecting local Waterkeeper groups worldwide.</p>
+            <p>As the senior web engineer on this project, I collaborated with strategy and design department to create sitemaps, site mock ups, userflows, and user interface design.</p>
+            <p>This case study goes over the website rebuild for waterkeeper.org. Waterkeeper alliance had the following goals for this website rebuild:</p>
+            <ul>
+                <li>simplify the lookup experience for Waterkeepers in your area.</li>
+                <li>Show areas protected by Waterkeepers.</li>
+                <li>Showcase “Waterkeeper” heroes to inspire people. </li>
+                <li>Increase donations.</li>
+            </ul>
+            <figure class="alignfull">
+              <figcaption>New website design</figcaption>
+               <img src="/assets/img/waterkeeper-mocks.jpg" />
+            </figure>
+            <h2 class="highlight heading-intro">Requirements</h2>
+            <p>The previous waterkeeper website was centered around the color blue to emphasize their focus on water. The waterkeeper team wanted a full redesign on the website.</p>
+            <figure class="alignwide">
+              <figcaption>previous waterkeeper website</figcaption>
+               <img src="/assets/img/waterkeeper-old.jpg" />
+            </figure>
+            <p>The waterkeeper team wanted the new site to be very visual. They wanted to leverage large images that demonstrated clean water, and also show how pollution can affect water.</p>
+            <p>The executive director wanted a map as a visually engaging way to find out more about waterkeepers and what areas are being actively maintained.</p>
+            <figure class="alignwide">
+              <figcaption>water, imagery, pollution</figcaption>
+              <div class="icon-box-container">
+                 <div class="icon-box shadow blue-fill">
+                   <partial src="/svg/water-icon.svg"></partial>
+                 </div>
+                 <div class="icon-box shadow">
+                   <partial src="/svg/image-icon.svg"></partial>
+                 </div>
+                 <div class="icon-box shadow yellow-fill">
+                   <partial src="/svg/pollution-icon.svg"></partial>
+                 </div>
+              </div>
+            </figure>
+            <h2 class="highlight heading-intro">Needfinding</h2>
+            <p>We wanted to streamline the process of a user finding waterkeepers in their area. The previous website brought the user to a large list of all the waterkeepers.</p>
+            <p>This list was categories by country and was searchable but lacked a visual representation of how much affect local waterkeepers are making.</p>
+            <figure class="alignwide">
+              <figcaption>previous waterkeepers page</figcaption>
+               <img src="/assets/img/waterkeepers-directory-old.jpg" />
+            </figure>
+            <p>Our team wanted to find a way to show the global scale of what waterkeeper alliance is doing but bring that to a relatable local level.</p>
+            <p>Focusing on the global scale and narrowing down to the country and then to the local waterkeeper. </p>
+            <figure class="image">
+              <figcaption>finding a waterkeeper user flow</figcaption>
+               <img src="/assets/img/userflow-waterkeeper.png" />
+            </figure>
+            <h2 class="highlight heading-intro">Design Review</h2>
+            <p>The waterkeeper jurisdictions are broken into 11 different regions around the world. We needed to think of a color palette that could be used as a clear delineation of these region jurisdictions. </p>
+            <figure class="alignwide">
+              <figcaption>map colors</figcaption>
+                <img src="/assets/img/waterkeeper-map-colors.png" />
+            </figure>
+            <p>The user flow for navigating waterkeeper jurisdictions had the map as a central navigation piece between all steps.</p>
+            <p>Taking the opportunity of the region level to highlight stats of that region. Until the user makes their way to the local jurisdiction where they can find a bio and contact information to get involved. </p>
+            <figure class="alignfull">
+              <figcaption>waterkeeper page designs</figcaption>
+                <img src="/assets/img/waterkeeper-new-flow-mocks.jpg" />
+            </figure>
+            <h2 class="highlight heading-intro">Execution</h2>
+            <p>I build the frontend of the site from scratch as I did not want to introduce unnecessary code that comes along with most frameworks. Their data of all the map lived in ESRI so I used ESRI’s API of ArcGIS to generate the map layer and populate it with the regions and jurisdictions.</p>
+            <p>The individual waterkeeper’s information was stored in salesforce, so I leveraged salesforce API to pull that data and populate the waterkeeper detail page. </p>
+            <figure class="alignwide">
+              <figcaption>developed waterkeeper global regions</figcaption>
+                <img src="/assets/img/waterkeeper-region-launch.jpg" />
+            </figure>
+            <p>I didn’t want the page speed to be slowed down each time that someone wanted to lookup a waterkeeper. So I built a cache mechanism to store that data from salesforce into a json array and serve the website from the static json file.</p>
+            <figure class="alignwide">
+              <figcaption>developed waterkeeper detail page</figcaption>
+               <img src="/assets/img/waterkeeper-detail-launch.jpg" />
+            </figure>
+            <p>Since the updated content for waterkeepers was not an immediate need, I built the cache to grab new data on a weekly basis. This improved the page speed for the user while still providing accurate content from salesforce.</p>
+            <h2 class="highlight heading-intro">Conclusion</h2>
+            <p>This was a fun visually satisfying project. Leveraging the API’s of waterkeeper alliance current data sources will allow their site to be current and dynamic for the foreseeable future.</p>
+            <p>The collaboration and team work from strategy, design and development allowed this project to be completed on time and under budget. It was a team effort that I was glad to be a part of.</p>
+        </article>
+      </div>
+    </main>
+    <partial src="footer.html"></partial>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/anime.min.js"></script>
+    <script src="./assets/js/scrollmonitor.min.js"></script>
+     <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

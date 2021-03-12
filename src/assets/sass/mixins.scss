@@ -1,0 +1,38 @@
+//mixins
+@mixin fluid-type($min-font-size: 12px, $max-font-size: 21px, $lower-range: 420px, $upper-range: 900px) {
+
+  font-size: calc(#{$min-font-size} + #{(($max-font-size / ($max-font-size * 0 + 1)) - ($min-font-size / ($min-font-size * 0 + 1)))} * ( (100vw - #{$lower-range}) / #{(($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1)))}));
+
+  @media screen and (max-width: $lower-range) {
+    font-size: $min-font-size;
+  }
+  @media screen and (min-width: $upper-range){
+    font-size: $max-font-size;
+  }
+}
+
+@mixin fluid-line-height($min-line-height: 12px, $max-line-height: 21px, $lower-range: 420px, $upper-range: 900px) {
+
+  line-height: calc(#{$min-line-height} + #{(($max-line-height / ($max-line-height * 0 + 1)) - ($min-line-height / ($min-line-height * 0 + 1)))} * ( (100vw - #{$lower-range}) / #{(($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1)))}));
+
+  @media screen and (max-width: $lower-range) {
+    line-height: $min-line-height;
+  }
+  @media screen and (min-width: $upper-range){
+    line-height: $max-line-height;
+  }
+}
+
+@mixin media($size) {
+  @if $size == phone {
+    @media (max-width: 599px) { @content; }
+  } @else if $size == tablet {
+    @media (min-width: 600px) { @content; }
+  } @else if $size == tablet-wide {
+    @media (min-width: 900px) { @content; }
+  } @else if $size == desktop {
+    @media (min-width: 1200px) { @content; }
+  } @else if $size == big-desktop {
+    @media (min-width: 1800px) { @content; }
+  }
+}
