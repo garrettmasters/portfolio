@@ -27,13 +27,13 @@
             </ul>
             <figure class="alignfull">
               <figcaption>New website design</figcaption>
-               <img src="/assets/img/waterkeeper-mocks.jpg" />
+               <img src="./assets/img/waterkeeper-mocks.jpg" />
             </figure>
             <h2 class="highlight heading-intro">Requirements</h2>
             <p>The previous waterkeeper website was centered around the color blue to emphasize their focus on water. The waterkeeper team wanted a full redesign on the website.</p>
             <figure class="alignwide">
               <figcaption>previous waterkeeper website</figcaption>
-               <img src="/assets/img/waterkeeper-old.jpg" />
+               <img src="./assets/img/waterkeeper-old.jpg" />
             </figure>
             <p>The waterkeeper team wanted the new site to be very visual. They wanted to leverage large images that demonstrated clean water, and also show how pollution can affect water.</p>
             <p>The executive director wanted a map as a visually engaging way to find out more about waterkeepers and what areas are being actively maintained.</p>
@@ -41,13 +41,13 @@
               <figcaption>water, imagery, pollution</figcaption>
               <div class="icon-box-container">
                  <div class="icon-box shadow blue-fill">
-                   <partial src="/svg/water-icon.svg"></partial>
+                   <partial src="./svg/water-icon.svg"></partial>
                  </div>
                  <div class="icon-box shadow">
-                   <partial src="/svg/image-icon.svg"></partial>
+                   <partial src="./svg/image-icon.svg"></partial>
                  </div>
                  <div class="icon-box shadow yellow-fill">
-                   <partial src="/svg/pollution-icon.svg"></partial>
+                   <partial src="./svg/pollution-icon.svg"></partial>
                  </div>
               </div>
             </figure>
@@ -56,37 +56,37 @@
             <p>This list was categories by country and was searchable but lacked a visual representation of how much affect local waterkeepers are making.</p>
             <figure class="alignwide">
               <figcaption>previous waterkeepers page</figcaption>
-               <img src="/assets/img/waterkeepers-directory-old.jpg" />
+               <img src="./assets/img/waterkeepers-directory-old.jpg" />
             </figure>
             <p>Our team wanted to find a way to show the global scale of what waterkeeper alliance is doing but bring that to a relatable local level.</p>
             <p>Focusing on the global scale and narrowing down to the country and then to the local waterkeeper. </p>
             <figure class="image">
               <figcaption>finding a waterkeeper user flow</figcaption>
-               <img src="/assets/img/userflow-waterkeeper.png" />
+               <img src="./assets/img/userflow-waterkeeper.png" />
             </figure>
             <h2 class="highlight heading-intro">Design Review</h2>
             <p>The waterkeeper jurisdictions are broken into 11 different regions around the world. We needed to think of a color palette that could be used as a clear delineation of these region jurisdictions. </p>
             <figure class="alignwide">
               <figcaption>map colors</figcaption>
-                <img src="/assets/img/waterkeeper-map-colors.png" />
+                <img src="./assets/img/waterkeeper-map-colors.png" />
             </figure>
             <p>The user flow for navigating waterkeeper jurisdictions had the map as a central navigation piece between all steps.</p>
             <p>Taking the opportunity of the region level to highlight stats of that region. Until the user makes their way to the local jurisdiction where they can find a bio and contact information to get involved. </p>
             <figure class="alignfull">
               <figcaption>waterkeeper page designs</figcaption>
-                <img src="/assets/img/waterkeeper-new-flow-mocks.jpg" />
+                <img src="./assets/img/waterkeeper-new-flow-mocks.jpg" />
             </figure>
             <h2 class="highlight heading-intro">Execution</h2>
             <p>I build the frontend of the site from scratch as I did not want to introduce unnecessary code that comes along with most frameworks. Their data of all the map lived in ESRI so I used ESRI’s API of ArcGIS to generate the map layer and populate it with the regions and jurisdictions.</p>
             <p>The individual waterkeeper’s information was stored in salesforce, so I leveraged salesforce API to pull that data and populate the waterkeeper detail page. </p>
             <figure class="alignwide">
               <figcaption>developed waterkeeper global regions</figcaption>
-                <img src="/assets/img/waterkeeper-region-launch.jpg" />
+                <img src="./assets/img/waterkeeper-region-launch.jpg" />
             </figure>
             <p>I didn’t want the page speed to be slowed down each time that someone wanted to lookup a waterkeeper. So I built a cache mechanism to store that data from salesforce into a json array and serve the website from the static json file.</p>
             <figure class="alignwide">
               <figcaption>developed waterkeeper detail page</figcaption>
-               <img src="/assets/img/waterkeeper-detail-launch.jpg" />
+               <img src="./assets/img/waterkeeper-detail-launch.jpg" />
             </figure>
             <p>Since the updated content for waterkeepers was not an immediate need, I built the cache to grab new data on a weekly basis. This improved the page speed for the user while still providing accurate content from salesforce.</p>
             <h2 class="highlight heading-intro">Conclusion</h2>
