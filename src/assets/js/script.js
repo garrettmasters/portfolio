@@ -1,5 +1,5 @@
 // import Swup from 'swup';
-const swup = new Swup();
+// const swup = new Swup();
 
 (function ($) {
   "use strict"; // Start of use strict

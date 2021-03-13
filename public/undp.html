@@ -14,7 +14,7 @@
 <nav class="main-nav"> <a class="logo" href="./">
         Garrett Masters
     </a>
-    <a class="active" href="./">Work</a>
+    <a href="./">Work</a>
 
     <div class="toggle-btn">
         <input type="checkbox" name="check" id="check">
@@ -88,57 +88,106 @@
     </div>
 </nav>
 
-<body class="loading">
-    <main>
+<body>
+    <main id="swup" class="transition-fade">
         <header class="hero">
-            <div class="hero__inner">
-                <h1 class="highlight">
-                    <div id="intro-one">Garrett Masters,</div>
-                    <div id="intro-two">developer of code</div>
-                    <div id="intro-three">implementor of designs</div>
-                </h1>
+            <div class="hero__inner hero__inner--detail">
+                <div class="hero__left">
+                    <h1 class="highlight">UNDP: SDG's Today</h1>
 
+                    <p>A compelling <b>mobile first website</b> that conveys the state of United
+                        Nations Development Programme (UNDP’s) Sustainable Development Goals (SDG’s)
+                        as it relates to the Covid-19 epidemic.</p>
+                    <p>A project of Fifty and Fifty creative agency</p> <strong class="highlight">Brief</strong>
+
+                    <p>The SDGs Today is a semi-annual web series that focuses on the question,
+                        ‘what is the state of the Sustainable Development Goals (SDGs) today’?
+                        This website <b>focuses on SDG’s goal number three on Good Health and Well-being.</b>
+
+                    </p>
+                </div>
+                <div class="hero__right">
+                    <img src="./assets/img/mobile-undp.jpg" />
+                </div>
             </div>
         </header>
-        <div class="container">
-            <div class="section">
-                <div id="image-one" class="section__block">
-                    <div class="section__image shadow"> <a href="waterkeeper.html">
-                            <img src="./assets/img/waterkeeper-tablet-mobile.jpg" />
-                        </a>
-
-                    </div>
-                </div>
-                <div class="section__block">
-                    <div class="section__text">
-                        <h2 id="title-one" class="highlight">
-                            <a href="waterkeeper.html">Waterkeeper</a>
-                        </h2>
-
-                        <p id="text-one">Build user facing tool for members and potential members to explore water
-                            conservation organizations in their area.</p>
-                    </div>
-                </div>
+        <div class="container container--small">
+            <div class="intro">
+                <p class="title-intro"><span class="highlight">Goals & Objectives</span>
+                </p>
+                <p>The primary goal for this site is to make the statistical data <b>visually engaging and accessible in english, spanish, and french languages</b>.
+                    The micro site was to be hosted on github pages so it needed to be built
+                    as a static website.</p>
+                <br>
+                <p class="title-intro"><span class="highlight">Involvement & Responsibilities</span>
+                </p>
+                <p>Frontend Development</p>
             </div>
-            <div class="section">
-                <div id="image-two" class="section__block">
-                    <div class="section__image shadow"> <a href="undp.html">
-                            <img src="./assets/img/undp-mobile-mocks.jpg" />
-                        </a>
+            <article>
+                <h2 class="highlight heading-intro">Approach & Direction</h2>
 
-                    </div>
-                </div>
-                <div class="section__block">
-                    <div class="section__text">
-                        <h2 id="title-two" class="highlight">
-                            <a href="undp.html">UNDP: SDGS - Health</a>
-                        </h2>
+                <p>In partnering with design we kicked a few ideas back and forth until we
+                    landed on making the experience of the site feel organic. We wanted to
+                    play off of the organic shape of a microscopic cell.</p>
+                <p>When you look at a cell there is always some movement on a microscopic
+                    level. We decided to take that idea and make text and image shapes that
+                    felt like you were looking under a microscope.</p>
+                <h2 class="highlight heading-intro">Design Review</h2>
 
-                        <p id="text-two">Implement public facing website to showcase UNDP's progress on their SDGS
-                            goal number 3 "Good Health & Well being"</p>
-                    </div>
-                </div>
-            </div>
+                <p>We landed on making a chapter approach that has six pages or chapters
+                    to tell this whole story. These chapters would be broken down into the
+                    following chapters:</p>
+                <ul>
+                    <li>A new future for health</li>
+                    <li>Health as a barometer
+                    <li>Health and equality</li>
+                    <li>Health and biodiversity</li>
+                    <li>Development on fast forward</li>
+                    <li>A global stress test</li>
+                </ul>
+                <figure class="alignwide">
+                    <figcaption>UNDP SDG's designs</figcaption>
+                    <img src="./assets/img/undp-designs.jpg" />
+                </figure>
+                <h2 class="highlight heading-intro">Execution</h2>
+
+                <p>With the mobile first approach we wanted the website to be slim and not
+                    have to rely on heavy frameworks.</p>
+                <p>I built the site using webpack which translated my SCSS into CSS as well
+                    as minified the javascript for this website. This allowed us to streamline
+                    the code for production. .</p>
+                <h3 class="highlight">Challenges</h3>
+
+                <p>The challenge was the images that were organic shapes needed to have an
+                    overlay to display the image credit. The images had a drop shadow ‘s that
+                    needed to be dependent on the element that it was on.</p>
+                <figure class="alignwide">
+                    <figcaption>The organic shapes</figcaption>
+                    <img src="./assets/img/undp-blob.jpg" />
+                </figure>
+                <h3 class="highlight">Solution</h3>
+
+                <p>The organic image shapes proved to be challenging for all the things that
+                    it was doing. After trial and error I discovered that you can manipulate
+                    boxes to have an organic shape by using a border-radius like the following: <b>(border-radius: 71% 42% 45% 69%/25% 43% 69% 89%;)</b>
+                </p>
+                <p>This is the effect that we were going for to create those organic shapes.
+                    The benefit of it being border-radius is that I can tie that to an animation
+                    and make those shapes infinitely move in a slow amoeba like way.</p>
+                <p>The shapes we could make on a div which had the img element inside. Taking
+                    advantage of pseudo elements we could create an overlay and the text to
+                    pop over the image when the right action takes place.</p>
+                <figure class="alignwide">
+                    <figcaption>The developed site</figcaption>
+                    <img src="./assets/img/undp-developed.jpg" />
+                </figure>
+                <h2 class="highlight heading-intro">Conclusion</h2>
+
+                <p>I am glad that I was able to be a part of this project. Everytime I am
+                    able to work closely with design I learn something new. This definitely
+                    pushed what I thought could be possible with CSS. I am always anxious to
+                    learn more and push the boundaries.</p>
+            </article>
         </div>
     </main>
     <footer>
@@ -250,11 +299,13 @@
             </div>
         </div>
     </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
     <script src="./assets/js/anime.min.js"></script>
     <script src="./assets/js/scrollmonitor.min.js"></script>
+    <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 
