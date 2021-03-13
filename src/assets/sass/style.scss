@@ -51,7 +51,7 @@ body {
   width: 100%;
   height: 100%;
   text-align: center;
-  background: var(--textyellow);
+  background: #ffffff;
 }
 
 .js .loading::after {
@@ -65,7 +65,7 @@ body {
   border-radius: 50%;
   margin: -25px 0 0 -25px;
   pointer-events: none;
-  background: #fff;
+  background: var(--textyellow);
   animation: loaderAnim 0.8s ease-out infinite alternate forwards;
 }
 
