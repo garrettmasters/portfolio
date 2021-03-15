@@ -1,0 +1,90 @@
+<html lang="en">
+  <partial src="head.html"></partial>
+  <partial src="header-work.html"></partial>
+
+  <body>
+    <main id="swup" class="transition-fade">
+      <partial src="hero-undp-covid.html"></partial>
+      <div class="container container--small">
+        <div class="intro">
+          <p class="title-intro"><span class="highlight">Goals & Objectives</span></p>
+          <p>The primary goal for this site is to create a cohesive look and feel for the website. One in which the consumer (public or governments) feels like all the data is coming from one central data source.</p>
+          <br>
+          <p class="title-intro"><span class="highlight">Involvement & Responsibilities</span></p>
+          <p>Scoping, Tech Requirement, UX, Frontend/Backend development </p>
+        </div>
+        <article>
+            <h2 class="highlight heading-intro">Approach & Direction</h2>
+            <p>With the amount of data that was being collected and organized this was a large team effort. We partnered with a company called Small Multiples which was in charge of integrating the data into Tableau.</p>
+            <p>The design team got to work creating a design system with all the necessary elements that would be needed to create this cohesive environment. </p>
+            <p>I was tasked with finding the most efficient way to display all the needed information about each country and how it relates to UNDP’s pillars.</p>
+            <h2 class="highlight heading-intro">Design Review</h2>
+            <p>The system that the design team came up with was a beautiful base to start developing this project. I collaborated with them to ensure we would have as many bases covered from a design perspective as we did not have the data to compare what would be required. </p>
+            <p>This design system was used by Small Multiples to match some of the Tableau content as well as myself to build the site around. </p>
+            <figure class="alignwide">
+              <figcaption>UNDP SDG's designs</figcaption>
+                <img src="./assets/img/undp-designs.jpg" />
+            </figure>
+            <h2 class="highlight heading-intro">Execution</h2>
+            <p>I needed to create a system that allowed each country to have it’s own page to display data relative to that country. However UNDP needed the ability to allow the country to see the data through the lens of each of their pillars of their framework of socio-economic response. These are:</p>
+            <ul>
+              <li>Health First</li>
+              <li>Protect People</li>
+              <li>Economic Recovery</li>
+              <li>Macro Response</li>
+              <li>Social Cohesion</li>
+            </ul>
+            <p>Most of these five pillars also included about three sub-pillars each which we called <i>“buckets”</i>. Each country needed to view its own data related to these five pillars and their three buckets.</p>
+            <p>Since most countries required all of these views I didn’t want to make 20 pages (5 pillars + (5 pillars x 3 buckets)) for each country. With efficiency in mind I thought about creating the needed 20 pages and then viewing them through the eyes of a country. This could be done with a query parameter in the url.</p>
+            <p>I synced up with Small Multiples and they confirmed they could grab a url query and generate the requested Tableau data.</p>
+            <p>After a very large google spreadsheet collaboration we had the agreed upon URL slugs and query parameters for every country, pillar, and bucket.</p>
+            <figure class="alignwide">
+              <figcaption>Pillar page (Country specific view)</figcaption>
+                <img src="./assets/img/undp-blob.jpg" />
+            </figure>
+            <h3 class="highlight">Challenges</h3>
+            <p>The request and response for data was solved. Once you were on a page choosing a country to view the data would place a url parameter, prompting the embeds to reload with the information filtered for that selected country.</p>
+            <p>The challenge was when a user navigated the site. Do we keep the url parameter? How would the user know they are viewing data filtered by that country? </p>
+            <figure class="alignwide">
+              <figcaption>The organic shapes</figcaption>
+                <img src="./assets/img/undp-blob.jpg" />
+            </figure>
+            <h3 class="highlight">Solution</h3>
+            <p>I partnered with design and we collectively decided it was best to keep the country filter (if set) as the user navigated around the site. Design only had to create one new element for the top of each page to indicate if the user was viewing data through the filter of a country.</p>
+            <p>This was accomplished by adding a cookie once a country was set. This cookie would accomplish the following:</p>
+            <ul>
+              <li>Add Country url parameter</li>
+              <li>Change all dropdowns to that country</li>
+              <li>Add new design element to the top of each page (indicating country view).</li>
+            </ul>
+            <p>A user could then choose another country to view the data, or close the new design element for that country and the user would view the regular data not specific to a country. </p>
+
+            <figure class="alignwide">
+              <figcaption>The developed site</figcaption>
+                <img src="./assets/img/undp-developed.jpg" />
+            </figure>
+            <h2 class="highlight heading-intro">Conclusion</h2>
+            <p>This was a challenging and rewarding project. Collaborating with a team in Australia to solve complex data problems, while only communicating virtually proved to be challenging. In the end it was the entire team and the collaboration and flexibility of all the teams that brought this project to launch. </p>
+        </article>
+      </div>
+    </main>
+    <partial src="footer.html"></partial>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/anime.min.js"></script>
+    <script src="./assets/js/scrollmonitor.min.js"></script>
+     <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

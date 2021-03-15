@@ -51,7 +51,7 @@ body {
   width: 100%;
   height: 100%;
   text-align: center;
-  background: #ffffff;
+  background: var(--background);
 }
 
 .js .loading::after {
@@ -366,7 +366,7 @@ html.is-animating .transition-fade {
         height: 2px;
         left: 0;
         position: absolute;
-        background: var(--textcoloractive);
+        background: var(--highlight);
         transition: width .3s ease 0s,left .3s ease 0s;
         width: 0;
       }

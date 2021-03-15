@@ -15,8 +15,28 @@
         </div>
         <article>
             <h2 class="highlight heading-intro">Approach & Direction</h2>
-            <p>In partnering with design we kicked a few ideas back and forth until we landed on making the experience of the site feel organic. We wanted to play off of the organic shape of a microscopic cell.</p>
-            <p>When you look at a cell there is always some movement on a microscopic level. We decided to take that idea and make text and image shapes that felt like you were looking under a microscope.</p>
+            <p>In partnering with design we kicked a few ideas back and forth. My goal was to let design be creative and think outside the box and bounce ideas off of me to ensure they could be completed in the time and scope allotted for this project.</p>
+            <p>Design came up with the idea of organic shapes that animated like a microscopic cell. When you look at a cell there is always some movement on a microscopic level. Design wanted to take that idea and make text and image shapes that felt like you were looking under a microscope.</p>
+            <p>When design bounced this idea off of me I thought it was great and I got to work mocking up some prototypes. Here are some early codepen’s to ensure it was what design was looking for.</p>
+            <figure class="alignwide">
+              <figcaption>Codepen of image in blob shape</figcaption>
+                <p class="codepen" data-height="619" data-theme-id="dark" data-default-tab="result" data-user="garrettmasters" data-slug-hash="KKzgKyj" style="height: 619px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Blob mask">
+                  <span>See the Pen <a href="https://codepen.io/garrettmasters/pen/KKzgKyj">
+                  Blob mask</a> by Garrett (<a href="https://codepen.io/garrettmasters">@garrettmasters</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+                <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            </figure>
+            <br>
+            <figure class="alignwide">
+                <figcaption>Codepen of animating blob</figcaption>
+                    <p class="codepen" data-height="587" data-theme-id="dark" data-default-tab="result" data-user="garrettmasters" data-slug-hash="vYGGKNj" style="height: 587px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Animated Blob">
+                      <span>See the Pen <a href="https://codepen.io/garrettmasters/pen/vYGGKNj">
+                      Animated Blob</a> by Garrett (<a href="https://codepen.io/garrettmasters">@garrettmasters</a>)
+                      on <a href="https://codepen.io">CodePen</a>.</span>
+                    </p>
+                    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            </figure>
             <h2 class="highlight heading-intro">Design Review</h2>
             <p>We landed on making a chapter approach that has six pages or chapters to tell this whole story. These chapters would be broken down into the following chapters:</p>
             <ul>
@@ -33,7 +53,7 @@
             </figure>
             <h2 class="highlight heading-intro">Execution</h2>
             <p>With the mobile first approach we wanted the website to be slim and not have to rely on heavy frameworks.</p>
-            <p>I built the site using webpack which translated my SCSS into CSS as well as minified the javascript for this website.  This allowed us to streamline the code for production. .</p>
+            <p>I built the site using webpack which translated my SCSS into CSS as well as minified the javascript for this website.  This allowed us to streamline the code for production.</p>
             <h3 class="highlight">Challenges</h3>
             <p>The challenge was the images that were organic shapes needed to have an overlay to display the image credit. The images had a drop shadow ‘s that needed to be dependent on the element that it was on. </p>
             <figure class="alignwide">
@@ -41,9 +61,9 @@
                 <img src="./assets/img/undp-blob.jpg" />
             </figure>
             <h3 class="highlight">Solution</h3>
-            <p>The organic image shapes proved to be challenging for all the things that it was doing. After trial and error I discovered that you can manipulate boxes to have an organic shape by using a border-radius like the following: <b>(border-radius: 71% 42% 45% 69%/25% 43% 69% 89%;)</b></p>
-            <p>This is the effect that we were going for to create those organic shapes. The benefit of it being border-radius is that I can tie that to an animation and make those shapes infinitely move in a slow amoeba like way. </p>
-            <p>The shapes we could make on a div which had the img element inside. Taking advantage of pseudo elements we could create an overlay and the text to pop over the image when the right action takes place. </p>
+            <p>The organic image shapes proved to be challenging for all the things that it was doing. From prototyping we knew that we could animate svg shapes in after effects, however we didn't have the time nor budget for an animator to create all the shapes we needed. We saved a lot of time early on since the animating prototype that I brought to design accomplished what they were looking for.</p>
+            <p>This animation was simply using border radius to crate the shapes. These border radius were percentage based like the following: <b>(border-radius: 71% 42% 45% 69%/25% 43% 69% 89%;)</b>. With the shape created I could animate it using simple keyframe animations to finish the feel of an organic amoeba.</p>
+            <p>I created the shapes as a div element which had the img element inside. Taking advantage of a pseudo element I could create an overlay. The copyright text was a hidden "p" tag that displayed based on a class. The end result allowed the user to click on the copywrite prompt which added the class, displaying the overlay and the text for each image.</p>
             <figure class="alignwide">
               <figcaption>The developed site</figcaption>
                 <img src="./assets/img/undp-developed.jpg" />
