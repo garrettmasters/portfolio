@@ -95,13 +95,13 @@
                 <div class="hero__left">
                     <h1 class="highlight">Waterkeeper</h1>
 
-                    <p>A strong <b>mobile first website</b> that broadcasts the message of protecting
-                        water systems worldwide and connects user to local conversation partners</p>
-                    <p>a project of Fifty and Fifty creative agency</p> <strong class="highlight">Brief</strong>
+                    <p>A strong <b>mobile-first website</b> that broadcasts the message of protecting
+                        water systems worldwide and connects the user to local conversation partners</p>
+                    <p>A project of Fifty and Fifty creative agency</p> <strong class="highlight">Brief</strong>
 
-                    <p>Connecting Waterkeeper alliance partners who are in the field and connect
-                        them to local individuals who are interested in helping. <b>A visual map was needed to display the impact</b> these
-                        partners are making as well as connecting local user to these partners.</p>
+                    <p>Connecting Waterkeeper Alliance partners in the field to each other and
+                        to local individuals who are interested in helping. <b>A visual map was needed to display the impact</b> these
+                        partners are making as well as connecting the local user to these partners.</p>
                 </div>
                 <div class="hero__right">
                     <img src="./assets/img/mobile-waterkeeper.jpg" />
@@ -112,13 +112,16 @@
             <div class="intro">
                 <p class="title-intro"><span class="highlight">Goals & Objectives</span>
                 </p>
-                <p>The primary goal of this website is to provide a <b>visual way to view impact of local water conservation efforts.</b> The
+                <p>The primary goal of this website is to provide a <b>visual way to view the impact of local water conservation efforts.</b> The
                     previous website didn't have a way to express the scale of waterkeeper
-                    alliance and it's partners</p>
+                    alliance and its partners.</p>
                 <br>
                 <p class="title-intro"><span class="highlight">Involvement & Responsibilities</span>
                 </p>
-                <p>Scoping, Tech Requirements, Frontend/Backend Development</p>
+                <p>Scoping, Tech Requirements, Front End/Back End Development</p>
+                <div class="site-link"> <a href="https://waterkeeper.org/" target="_blank">Visit Site</a>
+
+                </div>
             </div>
             <article>
                 <h2 class="highlight heading-intro">Approach & Direction</h2>
@@ -126,14 +129,14 @@
                 <p>We wanted to streamline the process of a user finding waterkeepers in
                     their area. The previous website brought the user to a large list of all
                     the waterkeepers.</p>
-                <p>This list was categories by country and was searchable but lacked a visual
-                    representation of how much affect local waterkeepers are making.</p>
+                <p>This list was categorized by country and was searchable but lacked a visual
+                    representation of how much of an effect local waterkeepers are making.</p>
                 <figure class="alignwide">
                     <figcaption>previous waterkeepers page</figcaption>
                     <img src="./assets/img/before-waterkeeper-flow.jpg" />
                 </figure>
-                <p>I partnered with design to find a way to show the global scale of what
-                    waterkeeper alliance is doing but bring that to a relatable local level.</p>
+                <p>I partnered with Design to find a way to show the global scale of what
+                    Waterkeeper Alliance is doing but bring that to a relatable local level.</p>
                 <p>We wanted to take the broad to narrow approach by focusing on the global
                     scale and narrowing down to the country and then to the local waterkeeper.</p>
                 <figure class="image">
@@ -144,16 +147,16 @@
 
                 <p>The user flow for navigating waterkeeper jurisdictions had the map as
                     a central navigation piece between all steps.</p>
-                <p>Taking the opportunity of the region level to highlight stats of that
-                    region. Until the user makes their way to the local jurisdiction where
-                    they can find a bio and contact information to get involved.</p>
+                <p>The regional level page needed to highlight regional stats for the user
+                    to view before making their way to the local jurisdiction where they would
+                    be able to find bio and contact information to get involved.</p>
                 <figure class="alignwide">
                     <figcaption>waterkeeper page designs</figcaption>
                     <img src="./assets/img/waterkeeper-designs.jpg" />
                 </figure>
                 <h2 class="highlight heading-intro">Execution</h2>
 
-                <p>I build the frontend of the site from scratch as I did not want to introduce
+                <p>I built the front end of the site from scratch as I did not want to introduce
                     unnecessary code that comes along with most frameworks.</p>
                 <p>Their data of all the map jurisdictions lived in ESRI. I used ESRI’s ArcGIS
                     API to pull the map layer and populate it with the regions and jurisdictions.</p>
@@ -166,27 +169,28 @@
                 </figure>
                 <h3 class="highlight">Challenges</h3>
 
-                <p>I needed to find a way to tie the map data with the waterkeepers information.</p>
-                <p>I could populate the waterkeepers region page with the data from salesforce.
-                    I could also populate the map with the data from ESRI.</p>
-                <p>However I needed to find a way to interact with the map and have the ability
-                    to click on a location and have it take you to the region or local waterkeeper</p>
+                <p>I needed to find a way to tie the map data with the waterkeeper's information.</p>
+                <p>I could populate the Waterkeepers region page with the data from salesforce
+                    or populate the map with the data from ESRI.</p>
+                <p>However, I needed to find a way to interact with the map and have the
+                    ability to click on a location and have it take the user to the region
+                    or local waterkeeper.</p>
                 <figure class="alignwide">
                     <figcaption>developed waterkeeper detail page</figcaption>
                     <img src="./assets/img/waterkeeper-detail.jpg" />
                 </figure>
                 <h3 class="highlight">Solution</h3>
 
-                <p>Hidden in the ESRI data map data was the saleforce ID for each waterkeeper
+                <p>Hidden in the ESRI data map data was the salesforce ID for each waterkeeper
                     jurisdiction. I was able to leverage this ID and pass it into the url as
                     a parameter.</p>
                 <p>From there I was able to pull in the url param of the salesforce ID and
                     do a lookup to return the information relating to that local waterkeeper.</p>
                 <h2 class="highlight heading-intro">Conclusion</h2>
-                <p>This was a fun visually satisfying project. Leveraging the API’s of waterkeeper
-                    alliance current data sources will allow their site to be current and dynamic
+                <p>This was a fun, visually satisfying project. Leveraging the API’s of Waterkeeper
+                    Alliance current data sources will allow their site to be current and dynamic
                     for the foreseeable future.</p>
-                <p>The collaboration and team work from strategy, design and development
+                <p>The collaboration and team-work from Strategy, Design and Development
                     allowed this project to be completed on time and under budget. It was a
                     team effort that I was glad to be a part of.</p>
             </article>
@@ -301,8 +305,6 @@
             </div>
         </div>
     </footer>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="./assets/js/anime.min.js"></script>

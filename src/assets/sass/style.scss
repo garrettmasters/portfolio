@@ -220,6 +220,22 @@ article {
   }
 }
 
+
+.site-link {
+  text-align: center;
+  margin: 4em auto -3em;
+  @include fluid-type(18px, 22px);
+  letter-spacing: 5px;
+  a {
+    color: var(--highlight);
+    transition: all 300ms ease;
+    opacity: 1;
+    &:hover {
+      opacity: 0.75;
+      transition: all 300ms ease;
+    }
+  }
+}
 // swup animation:
 .transition-fade {
   transition: 0.4s;
