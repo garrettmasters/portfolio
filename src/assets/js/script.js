@@ -26,12 +26,10 @@ function setColorScheme() {
   var darkModeOn = window.matchMedia("(prefers-color-scheme: dark)");
   darkModeOn.addListener = function(e) {
       e.matches && activateDarkMode();
-      console.log('darkmode on');
   }
   var lightModeOn = window.matchMedia("(prefers-color-scheme: light)");
   lightModeOn.addListener = function(e) {
     e.matches && activateLightMode();
-    console.log('lightmode on');
   }
 
   if(isDarkMode) activateDarkMode()
@@ -49,12 +47,10 @@ setColorScheme();
   var darkModeOn = window.matchMedia("(prefers-color-scheme: dark)");
   darkModeOn.addListener = function(e) {
       e.matches && activateDarkMode();
-      console.log('darkmode on');
   }
   var lightModeOn = window.matchMedia("(prefers-color-scheme: light)");
   lightModeOn.addListener = function(e) {
     e.matches && activateLightMode();
-    console.log('lightmode on');
   }
 function activateDarkMode() {
     document.documentElement.setAttribute("data-theme", "dark");
