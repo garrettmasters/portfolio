@@ -1,21 +1,14 @@
-
-
-//identify the toggle switch HTML element
 var toggleSwitch = document.querySelector('#check');
 var box = document.querySelector('.box')
 var ball = document.querySelector('.ball')
 //function that changes the theme, and sets a localStorage variable to track the theme between page loads
 function switchTheme(e) {
     if (e.target.checked) {
-        // localStorage.setItem('theme', 'dark');
         document.documentElement.setAttribute('data-theme', 'dark');
-        // box.setAttribute('style','background-color:white;')
         ball.setAttribute('style','transform:translatex(100%);')
         toggleSwitch.checked = true;
     } else {
-        // localStorage.setItem('theme', 'light');
         document.documentElement.setAttribute('data-theme', 'light');
-        // box.setAttribute('style','background-color:black;')
         ball.setAttribute('style','transform:translatex(0%);')
         toggleSwitch.checked = false;
     }
@@ -24,16 +17,22 @@ function switchTheme(e) {
 //listener for changing themes
 toggleSwitch.addEventListener('change', switchTheme, false);
 
-
-
 function setColorScheme() {
   var isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
   var isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
   var isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
   var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified;
 
-  window.matchMedia("(prefers-color-scheme: dark)").addListener(e => e.matches && activateDarkMode())
-  window.matchMedia("(prefers-color-scheme: light)").addListener(e => e.matches && activateLightMode())
+  var darkModeOn = window.matchMedia("(prefers-color-scheme: dark)");
+  darkModeOn.addListener = function(e) {
+      e.matches && activateDarkMode();
+      console.log('darkmode on');
+  }
+  var lightModeOn = window.matchMedia("(prefers-color-scheme: light)");
+  lightModeOn.addListener = function(e) {
+    e.matches && activateLightMode();
+    console.log('lightmode on');
+  }
 
   if(isDarkMode) activateDarkMode()
   if(isLightMode) activateLightMode()
@@ -47,21 +46,25 @@ function setColorScheme() {
   }
 }
 setColorScheme();
-window.matchMedia("(prefers-color-scheme: dark)").addListener(
-    e => e.matches && activateDarkMode()
-);
-window.matchMedia("(prefers-color-scheme: light)").addListener(
-    e => e.matches && activateLightMode()
-);
+  var darkModeOn = window.matchMedia("(prefers-color-scheme: dark)");
+  darkModeOn.addListener = function(e) {
+      e.matches && activateDarkMode();
+      console.log('darkmode on');
+  }
+  var lightModeOn = window.matchMedia("(prefers-color-scheme: light)");
+  lightModeOn.addListener = function(e) {
+    e.matches && activateLightMode();
+    console.log('lightmode on');
+  }
 function activateDarkMode() {
     document.documentElement.setAttribute("data-theme", "dark");
     toggleSwitch.checked = true;
-    ball.setAttribute('style','transform:translatex(100%);')
+    ball.setAttribute('style','transform:translatex(100%);');
 }
 function activateLightMode() {
     document.documentElement.setAttribute("data-theme", "light");
     toggleSwitch.checked = false;
-    ball.setAttribute('style','transform:translatex(0%);')
+    ball.setAttribute('style','transform:translatex(0%);');
 }
 
 
