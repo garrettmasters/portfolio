@@ -55,7 +55,7 @@ function js() {
         .pipe(jsImport({
             hideConsole: true
         }))
-        // .pipe(concat('all.js'))
+        .pipe(concat('all.js'))
         .pipe(gulpIf(isProd, uglify()))
         .pipe(gulp.dest('public/assets/js'));
 }
